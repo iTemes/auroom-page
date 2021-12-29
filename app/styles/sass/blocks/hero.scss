@@ -43,22 +43,32 @@
 
         @include media-breakpoint-up(md) {
             margin-bottom: 1rem;
+            justify-content: flex-end;
         }
     }
 
     h1 {
-        display: inline-flex;
-
-        padding: 2rem 1rem;
-        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
 
         span {
+            display: none;
             font-weight: 300;
-            padding: 0 0.5rem;
         }
 
         @include media-breakpoint-up(md) {
-            margin-left: auto;
+            display: inline-flex;
+            flex-direction: row;
+            margin-left: 0;
+
+            padding: 2rem 1rem;
+            background-color: rgba(255, 255, 255, 0.7);
+
+            span {
+                display: inline;
+                padding: 0 0.5rem;
+            }
         }
     }
 }
