@@ -1,0 +1,68 @@
+@include font('roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
+@include font('roboto', normal, 500, '../fonts/roboto-medium-webfont.woff2');
+@include font('roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
+
+// USER VARIABLES SECTION
+$accent: orange; // Accent Color
+$fontsize: 16px; // Body Font Size
+$textcolor: #333; // Text Color
+$lineheight: 1.65; // Document Line Height
+$userfont: roboto, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+$grid-breakpoints: (
+    xs: 0,
+    sm: 540px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1440px,
+    xxl: 1880px,
+);
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 1400px,
+    xl: 1640px,
+    xxl: 1880px,
+);
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/_nav.scss';
+@import 'node_modules/bootstrap/scss/_navbar.scss';
+@import 'node_modules/bootstrap/scss/_carousel.scss';
+@import 'node_modules/bootstrap/scss/helpers/_visually-hidden.scss';
+
+// GENERAL CSS SETTINGS
+
+body {
+    font-family: $userfont;
+    font-size: $fontsize;
+    line-height: $lineheight;
+    color: $textcolor;
+    min-width: 320px;
+    position: relative;
+    overflow-x: hidden;
+
+    padding-top: 3.5rem;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 5rem;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    font: inherit;
+}

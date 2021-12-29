@@ -1,0 +1,3 @@
+# Ignore all HTML files:
+app/parts/base/*.html
+index.html

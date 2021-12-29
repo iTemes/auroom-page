@@ -1,0 +1,125 @@
+.page-block {
+    padding: 2rem 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 4rem 0;
+    }
+    @include media-breakpoint-up(xl) {
+        display: flex;
+
+        &__title {
+            font-size: 1.5rem;
+            width: 25%;
+            max-width: 320px;
+        }
+
+        &__text {
+            width: 70%;
+            max-width: 40vw;
+
+            p {
+                margin-left: 3rem;
+
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+
+        span {
+            font-weight: 300;
+        }
+    }
+}
+
+/* Button */
+.block-btn-link {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+.block-btn-link__text {
+    display: inline-flex;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.27em;
+    text-transform: uppercase;
+    margin-right: 8px;
+    color: #000;
+}
+.block-btn-link__action {
+    display: inline-flex;
+}
+.block-btn-link__action-icon {
+    display: inline-flex;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    padding: 8px;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    font-size: 0;
+
+    border: 2px solid #000;
+
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+.block-btn-link--small .block-btn-link__action-icon {
+    height: 30px;
+    width: 30px;
+}
+.block-btn-link--small .block-btn-link__text {
+    font-size: 16px;
+}
+.block-btn-link:hover .block-btn-link__action-icon {
+    border-color: transparent;
+}
+.block-btn-link:hover .block-btn-link__text {
+    color: #000;
+}
+.block-btn-link__action-over {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+}
+.block-btn-link__action-over svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+.block-btn-link__action-over svg circle {
+    stroke-dasharray: 70;
+    stroke-dashoffset: 70;
+    stroke-width: 1px;
+    fill: none;
+    stroke: #da291c;
+
+    transition: 0.3s;
+}
+.block-btn-link__action-arrow {
+    fill: #000;
+}
+.block-btn-link:hover .block-btn-link__action-over circle {
+    stroke-dashoffset: 0;
+}
+.block-btn-link:hover .block-btn-link__action-arrow {
+    fill: #000;
+}
