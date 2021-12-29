@@ -1,0 +1,41 @@
+.social {
+    background-color: $color--black;
+}
+
+.social-list {
+    flex-direction: column;
+    list-style: none;
+
+    li {
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+
+        font-size: 1.1rem;
+        font-weight: 500;
+
+        color: $color--white;
+        text-decoration: none;
+
+        &:hover {
+            color: $color--white;
+            opacity: 0.9;
+        }
+
+        svg {
+            margin-right: 0.5rem;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        flex-direction: row;
+
+        li {
+            margin-bottom: 0;
+        }
+    }
+}
