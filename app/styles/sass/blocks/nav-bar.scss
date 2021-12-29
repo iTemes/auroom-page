@@ -5,6 +5,8 @@
     right: 0;
     z-index: 100;
 
+    padding: 0;
+
     background-color: $color--white;
 
     .nav-link {
@@ -22,6 +24,10 @@
 
     .navbar-brand {
         font-size: 2rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 1rem 0;
     }
 }
 
