@@ -1,0 +1,11 @@
+<!--#set var="title" value="Auroom lighting" -->
+
+<!--#include virtual="/parts/base/header.html" -->
+		<!--#include virtual="/parts/navbar.html" -->
+		<!--#include virtual="/parts/hero.html" -->
+		<!--#include virtual="/parts/about.html" -->
+		<!--#include virtual="/parts/carousel.html" -->
+		<!--#include virtual="/parts/tech.html" -->
+		<!--#include virtual="/parts/superior.html" -->
+		<!--#include virtual="/parts/social.html" -->
+<!--#include virtual="/parts/base/footer.html" -->

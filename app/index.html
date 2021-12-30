@@ -1,11 +1,106 @@
 <!--#set var="title" value="Auroom lighting" -->
 
 <!--#include virtual="/parts/base/header.html" -->
-		<!--#include virtual="/parts/navbar.html" -->
-		<!--#include virtual="/parts/hero.html" -->
-		<!--#include virtual="/parts/about.html" -->
-		<!--#include virtual="/parts/carousel.html" -->
-		<!--#include virtual="/parts/tech.html" -->
-		<!--#include virtual="/parts/superior.html" -->
-		<!--#include virtual="/parts/social.html" -->
+	<header>
+		<div class="logo">
+			<a class="Logo__link" href="#hero">AUROOM</a>
+		</div>
+
+		<nav>
+			<ul class="main-nav">
+				<li>
+					<a href="#first">ABOUT</a>
+				</li>
+				<li>
+					<a href="#second">GALERY</a>
+				</li>
+				<li>
+					<a href="#third">DESIGN</a>
+				</li>
+				<li>
+					<a href="#fours">SUPERIOR</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<ul class="side-menu" id="menu">
+		<li data-menuanchor="hero"><a href="#hero">1</a></li>
+		<li data-menuanchor="first"><a href="#first">1</a></li>
+		<li data-menuanchor="second"><a href="#second">2</a></li>
+		<li data-menuanchor="third"><a href="#third">3</a></li>
+		<li data-menuanchor="fours"><a href="#fours">4</a></li>
+	</ul>
+	<main class="page-main" id="fullpage">
+		<section class="section hero" data-anchor="hero">
+			<div class="card-img hero-img" id="imgHero">
+				<div class="card-content card-content--hero">
+					<div class="card-content--hero__text">
+						<h1 class="card-header">AUROOM <span>LIGHTING SYSTEM</span></h1>
+						<p class="card-para">Beautiful, noble, sophisticated and elegant lighting system made of 100% brass.</p>
+						<a class="card__link" href="#first">About<span class="link-arrow"></span></a>
+					</div>
+				</div>
+			</div>
+			<video playsinline autoplay muted loop>
+				<source src="video/auroom_newvid_banner.mp4"></source>
+			</video>
+		</section>
+		<section class="section slide first" data-anchor="first">
+			<div class="card">
+				<div class="card-img card-img--first" id="img01"></div>
+				<div class="card-content">
+					<p class="card-theme visually-hidden">Подвесной светильник</p>
+					<h2 class="card-header">Sozvezdie</h2>
+					<p class="card-para">Несколько сотен источников света напоминают россыпь звезд в ночном небе.
+						В основе сложной хаотичной структуры светильника - металлический каркас, объединяющий светодиодные лампы в единую электрическую сеть.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="section slide second" data-anchor="second">
+			<div class="card">
+				<div class="card-img card-img--second" id="img02"></div>
+				<div class="card-content">
+					<p class="card-theme visually-hidden">Подвесной светильник</p>
+					<h2 class="card-header">Tesseract</h2>
+					<p class="card-para">Современный дизайн в духе конструктивизма.
+						В основе сложной структуры светильника - металлический каркас, объединяющий несколько сотен источников света в единую электрическую сеть.
+						Тонкие стеклянные трубки, пронизывающие конструкцию, создают эффектный объем.
+
+						Собирается вручную в Москве. Каждый заказ обсуждается индивидуально.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="section slide third" data-anchor="third">
+			<div class="card">
+				<div class="card-img card-img--third" id="img03"></div>
+				<div class="card-content">
+					<p class="card-theme visually-hidden">Подвесной светильник</p>
+					<h2 class="card-header">Molecule</h2>
+					<p class="card-para">
+						В основе подвесного светильника Molecule - металлический каркас, объединяющий несколько сотен источников света.
+						Квадратные модули соединяются между собой, образуя композиции разного размера и формы.
+
+						Собирается вручную под заказ от 10 дней. Каждый заказ обсуждается индивидуально.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="section slide fours" data-anchor="fours">
+			<div class="card">
+				<div class="card-img card-img--fours" id="img04"></div>
+				<div class="card-content">
+					<p class="card-theme visually-hidden">Подвесной светильник</p>
+					<h2 class="card-header">Camelot</h2>
+					<p class="card-para">
+						Светильники серии CAMELOT, каркас которых состоит из сцепленных тонких проволок, будто парят под потолком, в сиянии светодиодов.
+						Хрустальные подвесы преломляют световые потоки. Металлический трос регулируется по длине, подстраиваясь под параметры вашего помещения.
+
+						Может быть исполнен в любом размере и конфигурации. Собирается вручную в Москве. Каждый заказ обсуждается индивидуально.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>	
 <!--#include virtual="/parts/base/footer.html" -->
