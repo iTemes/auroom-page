@@ -139,7 +139,7 @@ function deploy() {
     return src('dist/').pipe(
         rsync({
             root: 'dist/',
-            hostname: 'centrsvet@main.centrsvet.ru',
+            hostname: 'centrsvet@new.centrsvet.ru',
             destination: '/home/centrsvet/static/auroom-lighting-system/',
             // clean: true, // Mirror copy with file deletion
             include: ['*.htaccess'], // Included files to deploy,
