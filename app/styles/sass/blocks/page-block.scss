@@ -1,5 +1,20 @@
+.about {
+    &--contacts {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+}
+
 .page-block {
     padding: 2rem 0;
+    &__title {
+        font-weight: 700;
+        margin-bottom: 2rem;
+
+        span {
+            font-weight: 300;
+        }
+    }
 
     @include media-breakpoint-up(md) {
         padding: 4rem 0;
@@ -11,6 +26,7 @@
             font-size: 1.5rem;
             width: 25%;
             max-width: 320px;
+            margin-bottom: 0;
         }
 
         &__text {
@@ -21,14 +37,6 @@
             p {
                 font-size: 1.2rem;
             }
-        }
-    }
-
-    &__title {
-        font-weight: 700;
-
-        span {
-            font-weight: 300;
         }
     }
 }
