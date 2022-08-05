@@ -21,21 +21,22 @@
     }
     @include media-breakpoint-up(xl) {
         display: flex;
+        justify-content: space-between;
 
         &__title {
-            font-size: 1.5rem;
-            width: 25%;
-            max-width: 320px;
+            font-size: 2.5rem;
+            width: 30%;
             margin-bottom: 0;
         }
 
         &__text {
-            width: 70%;
-            max-width: 40vw;
+            width: 60%;
+
             margin-left: 3rem;
 
             p {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
+                max-width: 800px;
             }
         }
     }

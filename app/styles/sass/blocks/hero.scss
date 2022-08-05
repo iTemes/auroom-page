@@ -5,36 +5,36 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    height: 65vh;
+    min-height: 65vh;
 
-    video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    // video {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
 
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        background-position: center center;
-        background-size: contain;
-        object-fit: cover;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: black;
+    //     background-position: center center;
+    //     background-size: contain;
+    //     object-fit: cover;
 
-        z-index: 3;
-    }
+    //     z-index: 3;
+    // }
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.25);
-        z-index: 4;
-        transition: 0.85s;
-    }
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background: rgba(0, 0, 0, 0.25);
+    //     z-index: 4;
+    //     transition: 0.85s;
+    // }
 
     &__wrap {
         display: flex;
@@ -46,29 +46,261 @@
             justify-content: flex-end;
         }
     }
+}
+
+.brand-bg {
+    position: fixed;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    background: #000;
+    font-size: 0;
+    left: 0;
+    top: 0;
+
+    z-index: 100000;
+    animation: hideBg 0.6s linear 1.4s 1 normal both;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+
+    display: block;
+    width: 100%;
+    height: 1252px;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.hero-video-container {
+    height: 100%;
+
+    @media (max-width: 1023px) {
+        height: auto;
+    }
+}
+.hero-video-poster {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+
+    display: block;
+    width: 100%;
+    height: 1252px;
+    z-index: 2;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.section-bg {
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    transition: opacity 0.2s;
+}
+
+.section-bg.hero-video-endframe {
+    transition: none;
+    bottom: auto;
+    top: 0;
+    z-index: 2;
+    height: 1252px;
+    background-size: cover;
+}
+
+.company-section-s1 {
+    width: 100%;
+    height: 95vh;
+    left: 0;
+    top: 85px;
+    z-index: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: rgba(254, 254, 254, 1);
+
+    @media (max-width: 1023px) {
+        justify-content: center;
+    }
+}
+
+.company-section-s1 .logo {
+    position: relative;
+    z-index: 3;
+    padding-bottom: 10vh;
+
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #000;
+    animation: fadeInUpLogo 0.85s linear 5s both;
 
     h1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
+        font-weight: 700;
+        font-size: 64px;
+    }
 
-        span {
-            display: none;
-            font-weight: 300;
+    span {
+        font-weight: 300;
+    }
+
+    @media (min-width: 1440px) {
+        min-height: 35vh;
+        padding: 80px 0 16px;
+        padding-bottom: 16px;
+        padding-bottom: 15vh;
+        background: rgba(254, 254, 254, 0.75);
+    }
+
+    @media (max-width: 767px) {
+        padding: 100px 16px;
+        margin-bottom: 30px;
+        h1 {
+            font-size: 28px;
         }
+    }
+}
 
-        @include media-breakpoint-up(md) {
-            display: inline-flex;
-            flex-direction: row;
-            margin-left: 0;
+.company-section-s-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 
-            padding: 2rem 1rem;
-            background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
 
-            span {
-                display: inline;
-                padding: 0 0.5rem;
-            }
+.section-content {
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    padding: 3rem 0;
+}
+
+.key-features {
+    text-align: left;
+    list-style: none;
+}
+
+.key-features__feature {
+    display: inline;
+    font-size: 78px;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    opacity: 0.25;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.key-features__feature.active {
+    opacity: 1;
+}
+
+.color-brass {
+    color: #cfa662;
+}
+
+.s-text-video-bg {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.company-section-s-text .s-text-video-bg video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+
+.bg-container {
+    height: 100vh;
+    margin-top: 200px;
+    position: relative;
+
+    video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        object-fit: fill;
+    }
+}
+
+.company-section-s-text .s-text-video-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+@media (max-width: 1359px) {
+    .section-content {
+        width: 87.5%;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-bg.hero-video-endframe,
+    .hero-video,
+    .hero-video-poster {
+        height: 700px;
+    }
+
+    .key-features__feature {
+        font-size: 34px;
+        line-height: 1.125;
+    }
+
+    .bg-container {
+        height: 300px;
+        margin-top: 40px;
+        position: relative;
+
+        video {
+            position: static;
         }
+    }
+}
+
+@keyframes fadeInUpLogo {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 1%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
     }
 }
