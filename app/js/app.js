@@ -15,15 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoTitle = document.querySelector('.logo__title');
     const heroStartframe = document.querySelector('.hero-video-poster');
     const introVideo = document.getElementById('hero-video');
+    const introVideoMob = document.getElementById('hero-video-mobile');
     const heroEndframe = document.querySelector('.hero-video-endframe');
 
-    function checkforVideo() {
+    function checkforVideo(video) {
         //Every 500ms, check if the video element has loaded
         let b = setInterval(() => {
-            if (introVideo.readyState >= 3) {
+            if (video.readyState >= 3) {
                 //This block of code is triggered when the video is loaded
-                console.log('video loaded', introVideo.readyState);
-                startHeroVideo(introVideo);
+                console.log('video loaded', video.readyState);
+                startHeroVideo(video);
 
                 clearInterval(b);
             }
@@ -35,14 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
             heroStartframe.style.opacity = 0;
             introVideo.setAttribute('autoplay', 'autoplay');
             introVideo.play();
+            introVideoMob.play();
         }, 1000);
     }
     introVideo.addEventListener('ended', (event) => {
         introVideo.style.opacity = 0;
         heroEndframe.style.opacity = 1;
     });
+    introVideoMob.addEventListener('ended', (event) => {
+        introVideoMob.style.opacity = 0;
+        heroEndframe.style.opacity = 1;
+    });
 
-    checkforVideo();
+    checkforVideo(introVideo);
+    checkforVideo(introVideoMob);
     // create a scene
     const controller = new ScrollMagic.Controller();
 
